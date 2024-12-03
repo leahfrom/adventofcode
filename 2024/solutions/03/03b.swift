@@ -16,7 +16,7 @@ func solvePuzzle(input: [String]) -> Int {
         let sublines = line.components(separatedBy: "do")
 
         for subline in sublines {
-            if subline.contains("not") || subline.contains("n't") { continue }
+            if subline.contains("n't") { continue }
 
             let matches = subline.matches(of: try! Regex("mul\\((\\d+),(\\d+)\\)"))
             for match in matches {
