@@ -10,8 +10,9 @@ let testInput: [String] = [
     "SMSMSASXSS",
     "SAXAMASAAA",
     "MAMMMXMMMM",
+    "MXMXAXMASX",
 ]
-let testSolution: Int = 10  // 18? Maybe bug?
+let testSolution: Int = 18
 
 let textFile: String = try String(contentsOfFile: "./puzzleInput.txt", encoding: .utf8)
 let puzzleInput: [String] = textFile.components(separatedBy: "\n")
