@@ -33,7 +33,7 @@ func solvePuzzle(input: [String]) -> Int {
     return output
 }
 
-print("AoC Day 02a")
+print("AoC Day 03b")
 let testPassing: Bool = testSolution == solvePuzzle(input: testInput)
 print("Test passing? \(testPassing)")
 if testPassing {
