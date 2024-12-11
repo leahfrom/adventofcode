@@ -1,10 +1,5 @@
 import Foundation
 
-let testInput: [String] = [
-    "125 17"
-]
-let testSolution: Int = 55312
-
 let textFile: String = try String(contentsOfFile: "./puzzleInput.txt", encoding: .utf8)
 let puzzleInput: [String] = textFile.components(separatedBy: "\n")
 
@@ -47,7 +42,7 @@ func blinkAtStone(value: Int, remainingBlinks: Int) -> Int {
 }
 
 func solvePuzzle(input: [String]) -> Int {
-    let blinking: Int = 25
+    let blinking: Int = 75
     var stones: [Int] = []
 
     for line in input {
@@ -65,9 +60,5 @@ func solvePuzzle(input: [String]) -> Int {
     return numberStones
 }
 
-print("AoC Day 11a")
-let testPassing: Bool = testSolution == solvePuzzle(input: testInput)
-print("Test passing? \(testPassing)")
-if testPassing {
-    print("Solution: \(solvePuzzle(input: puzzleInput))")
-}
+print("AoC Day 11b")
+print("Solution: \(solvePuzzle(input: puzzleInput))")
