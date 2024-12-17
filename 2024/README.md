@@ -16,7 +16,7 @@ Here is how long each solution runs. All solutions are measured (non scientifica
 | [day 6](https://adventofcode.com/2024/day/6)   | [`6.2 ms`](./solutions/06/06a.swift)   | [`11.139 s`](./solutions/06/06b.swift) |
 | [day 7](https://adventofcode.com/2024/day/7)   | [`39.8 ms`](./solutions/07/07a.swift)  | [`3.670 s`](./solutions/07/07b.swift)  |
 | [day 8](https://adventofcode.com/2024/day/8)   | [`3.8 ms`](./solutions/08/08a.swift)   | [`3.9 ms`](./solutions/08/08b.swift)   |
-| [day 9](https://adventofcode.com/2024/day/9)   | [`5.266 s`](./solutions/09/09a.swift)  | [`848.3 m`](./solutions/09/09b.swift)  |
+| [day 9](https://adventofcode.com/2024/day/9)   | [`5.266 s`](./solutions/09/09a.swift)  | [`848.3 ms`](./solutions/09/09b.swift) |
 | [day 10](https://adventofcode.com/2024/day/10) | [`4.1 ms`](./solutions/10/10a.swift)   | [`4.1 ms`](./solutions/10/10b.swift)   |
 | [day 11](https://adventofcode.com/2024/day/11) | [`4.2 ms`](./solutions/11/11a.swift)   | [`35.1 ms`](./solutions/11/11b.swift)  |
 | [day 12](https://adventofcode.com/2024/day/12) | [`9.2 ms`](./solutions/12/12a.swift)   |                                        |
@@ -24,7 +24,7 @@ Here is how long each solution runs. All solutions are measured (non scientifica
 | [day 14](https://adventofcode.com/2024/day/14) | [`4.9 ms`](./solutions/14/14a.swift)   | [`165.2 ms`](./solutions/14/14b.swift) |
 | [day 15](https://adventofcode.com/2024/day/15) | [`7.5 ms`](./solutions/15/15a.swift)   |                                        |
 | [day 16](https://adventofcode.com/2024/day/16) | [`23.4 ms`](./solutions/16/16a.swift)  |                                        |
-| [day 17](https://adventofcode.com/2024/day/17) | [`3.9 ms`](./solutions/17/17a.swift)   |                                        |
+| [day 17](https://adventofcode.com/2024/day/17) | [`3.7 ms`](./solutions/17/17a.swift)   | [`3.9 ms`](./solutions/17/17b.swift)   |
 | [day 18](https://adventofcode.com/2024/day/18) |                                        |                                        |
 | [day 19](https://adventofcode.com/2024/day/19) |                                        |                                        |
 | [day 20](https://adventofcode.com/2024/day/20) |                                        |                                        |
