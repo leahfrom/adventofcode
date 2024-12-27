@@ -1,6 +1,8 @@
 import Foundation
 
-let year = Date().formatted(.dateTime.year())
+let year =
+    CommandLine.arguments.count > 2
+    ? CommandLine.arguments[2] : Date().formatted(.dateTime.year())
 let day =
     CommandLine.arguments.count > 1
     ? CommandLine.arguments[1] : Date().formatted(.dateTime.day(.twoDigits))
