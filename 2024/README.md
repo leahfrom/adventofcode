@@ -4,7 +4,7 @@
 
 ## Timings
 
-Here is how long each solution runs. All solutions are measured (non scientifically) with [`hyperfine`](https://github.com/sharkdp/hyperfine) (mean time) on an MacBook Pro 2021 using a M1 Pro.
+Here is how long each solution runs. All solutions are measured (non scientifically) with [`hyperfine`](https://github.com/sharkdp/hyperfine) (mean time) on a MacBook Pro 2021 using a M1 Pro.
 
 |                                                | part A                                 | part B                                 |
 | ---------------------------------------------- | -------------------------------------- | -------------------------------------- |
