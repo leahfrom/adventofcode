@@ -1,94 +1,36 @@
 import Foundation
 
-let testInput: [String] = [
-    "#####",
-    ".####",
-    ".####",
-    ".####",
-    ".#.#.",
-    ".#...",
-    ".....",
-    "",
-    "#####",
-    "##.##",
-    ".#.##",
-    "...##",
-    "...#.",
-    "...#.",
-    ".....",
-    "",
-    ".....",
-    "#....",
-    "#....",
-    "#...#",
-    "#.#.#",
-    "#.###",
-    "#####",
-    "",
-    ".....",
-    ".....",
-    "#.#..",
-    "###..",
-    "###.#",
-    "###.#",
-    "#####",
-    "",
-    ".....",
-    ".....",
-    ".....",
-    "#....",
-    "#.#..",
-    "#.#.#",
-    "#####",
-]
-let testSolution: Int = 3
-
-let textFile: String = try String(contentsOfFile: "./puzzleInput.txt", encoding: .utf8)
-let puzzleInput: [String] = textFile.components(separatedBy: "\n")
-
 func solvePuzzle(input: [String]) -> Int {
     var keysThatFit: Int = 0
 
     var locks: [[Int]] = []
     var keys: [[Int]] = []
 
-    let splitInput = input.split(separator: "")
+    let splitInput = input.split(separator: "").map({ $0.map({ $0.map({ String($0) }) }) })
 
-    for splitted in splitInput {
-        let object = Array(splitted.map({ $0.map { String($0) } }))
+    func getConfig(_ object: [[String]]) -> [Int] {
+        var config: [Int] = []
 
+        for y in 0..<object.count {
+            for x in 0..<object[y].count {
+                if object[y][x] == "#" {
+                    if config.count == x {
+                        config.append(0)
+                    } else {
+                        config[x] += 1
+                    }
+                }
+            }
+        }
+
+        return config
+    }
+
+    for object in splitInput {
         if object[0].filter({ $0 == "#" }).count == object[0].count {
-            var lock: [Int] = []
-
-            for y in 0..<object.count {
-                for x in 0..<object[y].count {
-                    if object[y][x] == "#" {
-                        if lock.count == x {
-                            lock.append(0)
-                        } else {
-                            lock[x] += 1
-                        }
-                    }
-                }
-            }
-
-            locks.append(lock)
+            locks.append(getConfig(object))
         } else {
-            var key: [Int] = []
-
-            for y in 0..<object.count {
-                for x in 0..<object[y].count {
-                    if object.reversed()[y][x] == "#" {
-                        if key.count == x {
-                            key.append(0)
-                        } else {
-                            key[x] += 1
-                        }
-                    }
-                }
-            }
-
-            keys.append(key)
+            keys.append(getConfig(object.reversed()))
         }
     }
 
@@ -113,9 +55,15 @@ func solvePuzzle(input: [String]) -> Int {
     return keysThatFit
 }
 
+func loadFileContent(_ path: String) -> [String] {
+    return try! String(contentsOfFile: path, encoding: .utf8)
+        .trimmingCharacters(in: .whitespacesAndNewlines).components(
+            separatedBy: "\n")
+}
+
 print("AoC Day 25a")
-let testPassing: Bool = testSolution == solvePuzzle(input: testInput)
+let testPassing: Bool = 3 == solvePuzzle(input: loadFileContent("./testInput.txt"))
 print("Test passing? \(testPassing)")
 if testPassing {
-    print("Solution: \(solvePuzzle(input: puzzleInput))")
+    print("Solution: \(solvePuzzle(input: loadFileContent("./puzzleInput.txt")))")
 }
