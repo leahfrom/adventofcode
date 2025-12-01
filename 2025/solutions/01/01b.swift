@@ -1,7 +1,7 @@
 import Foundation
 
 func solvePuzzle(input: [String]) -> Int {
-    var numberStore: Int = 0
+    var solution: Int = 0
     var position: Int = 50
 
     for line in input {
@@ -15,7 +15,7 @@ func solvePuzzle(input: [String]) -> Int {
                     position = 0
                 }
                 if position == 0 {
-                    numberStore += 1
+                    solution += 1
                 }
             }
         } else {
@@ -25,13 +25,13 @@ func solvePuzzle(input: [String]) -> Int {
                     position = 99
                 }
                 if position == 0 {
-                    numberStore += 1
+                    solution += 1
                 }
             }
         }
     }
 
-    return numberStore
+    return solution
 }
 
 func loadFileContent(_ path: String) -> [String] {
