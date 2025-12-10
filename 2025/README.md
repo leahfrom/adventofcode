@@ -17,6 +17,6 @@ Here is how long each solution runs. All solutions are measured (non scientifica
 | [day 7](https://adventofcode.com/2025/day/7)   | [`23.9 ms`](./solutions/07/07a.swift)  | [`24.6 ms`](./solutions/07/07b.swift)  |
 | [day 8](https://adventofcode.com/2025/day/8)   |                                        |                                        |
 | [day 9](https://adventofcode.com/2025/day/9)   | [`9.6 ms`](./solutions/09/09a.swift)   |                                        |
-| [day 10](https://adventofcode.com/2025/day/10) |                                        |                                        |
+| [day 10](https://adventofcode.com/2025/day/10) | [`38.1 ms`](./solutions/10/10a.swift)  |                                        |
 | [day 11](https://adventofcode.com/2025/day/11) |                                        |                                        |
 | [day 12](https://adventofcode.com/2025/day/12) |                                        |                                        |
